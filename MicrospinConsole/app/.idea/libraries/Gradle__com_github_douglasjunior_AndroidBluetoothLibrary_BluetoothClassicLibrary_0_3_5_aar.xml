@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.douglasjunior.AndroidBluetoothLibrary:BluetoothClassicLibrary:0.3.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/BluetoothClassicLibrary-0.3.5.aar/344cda05357f4f74e8f3a3d6c14aaaae/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/BluetoothClassicLibrary-0.3.5.aar/344cda05357f4f74e8f3a3d6c14aaaae/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

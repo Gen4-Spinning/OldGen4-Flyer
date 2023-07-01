@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Microspin\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\83ba1b0e19fdd84ea27b277cea3fbba4\\res\\values-or\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "198",
+                        "endOffsets": "445"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "198",
+                        "endOffsets": "299"
+                    }
+                }
+            ]
+        }
+    ]
+}

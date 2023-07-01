@@ -1,0 +1,4 @@
+#Sat Jul 01 11:24:43 IST 2023
+base.0=E\:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

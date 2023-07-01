@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">"Flyer"</string>
+    <string name="version">"Ver:"</string>
+    <string name="code">"PH2_AQ_FF-V06"</string>
+    <string name="action_scan">SCAN</string>
+    <string name="action_stop">STOP</string>
+    <string name="action_restart">Restart</string>
+    <string name="action_add">+</string>
+    <string name="action_reduce">-</string>
+
+    <string name="title_activity_device_list">Devices</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="prompt_select_one">Select One</string>
+
+
+    <!--************* TAB LABELS *****************-->
+    <string name="label_status">Status</string>
+    <string name="label_settings">Settings</string>
+    <string name="label_utilities">Utilities</string>
+    <string name="label_diagnostics">Tests</string>
+    <string name="label_exit">Exit Application</string>
+
+    <!--************** LABELS ************************-->
+    <string name="label_operating_params">Live Operating Status</string>
+    <string name="label_op_status">Status</string>
+    <string name="label_stop_motor">Motor</string>
+    <string name="label_stop_error">Error</string>
+    <string name="label_stop_reason">Reason</string>
+    <string name="label_stop_value">Value</string>
+
+    <!--************** Bluetooth ***********************-->
+    <string name="msg_bluetooth_connecting">Connecting</string>
+    <string name="msg_bluetooth_not_connect">Connection Failed</string>
+    <string name="msg_bluetooth_start_scanning">Scanning for Bluetooth Devices</string>
+    <string name="msg_bluetooth_stop_scanning">Scanning Stopped</string>
+    <string name="msg_bluetooth_connected">Connected to Bluetooth Device</string>
+    <string name="msg_bluetooth_disconnected">Disconnected from Bluetooth Device</string>
+
+
+    <!--******************* Content Description *************-->
+    <string name="desc_logo">Microspin Logo</string>
+
+    <!--******************* Operation Parameters ************************-->
+    <string name="label_param_1">Production - Total Output (m)</string>
+    <string name="label_target_layer">Target Length (mtrs)</string>
+    <string name="label_param_2">Current Length (mtrs)</string>
+    <string name="label_param_3">RTF</string>
+
+
+    <!--******************* Settings ************************-->
+    <string name="label_setting_1">Spindle Speed (rpm)</string>
+    <string name="label_setting_2">Draft </string>
+    <string name="label_setting_3">Twist Per Inch</string>
+    <string name="label_setting_4">RTF</string>
+    <string name="label_setting_5">Length Limit (mtrs) </string>                  <!--Max Roving Layers</string>-->
+    <string name="label_setting_6">Max Height of Content</string>
+    <string name="label_setting_7">Roving Width</string>
+    <string name="label_setting_8">Delta Bobbin-dia</string>
+    <string name="label_setting_9">Bare Bobbin-dia</string>
+    <string name="label_setting_10">Boost Factor</string>
+    <string name="label_setting_11">Buck Factor</string>
+
+    <string name="msg_setting_updated">Settings Updated</string>
+    <string name="msg_setting_saved">Settings Saved</string>
+    <string name="msg_setting_updating">Updating Settings</string>
+
+    <string name="msg_setting_next1">PID</string>    // button
+    <string name="msg_setting_back">Back</string>    //button
+
+
+    <string name="msg_PIDSetting_buttonRefresh">Refresh</string>
+    //button
+    <string name="msg_PIDSetting_buttonSave">Save</string>
+    //button
+    <string name="msg_PIDSetting_buttonCancel">Cancel</string>
+    //button
+
+    <string name="pidSpinnerOptions">Options</string>
+    <string name="label_Kp">Kp</string>
+    <string name="label_Ki">Ki</string>
+    <string name="label_startingOffset">Starting PWM Offset </string>
+    <string name="label_rampUp_M">RTF RampUp Multiplier</string>
+    <string name="label_rampDown_M">RTF RampDown Multiplier</string>
+    <string name="label_rampUp_rate">RampUp Speed</string>
+    <string name="label_rampDown_rate">RampDown Speed</string>
+
+    <string name="msg_refresh_waiting">Waiting For Response</string>
+    <string name="msg_refresh_cancelled">Cancelled</string>
+    <string name="msg_refresh_received">PID Values Received</string>
+    <string name="msg_setting_saved_pid">New PID Values Saved</string>
+
+    <!--******************* Diagnose ************************-->
+    <string name="label_diagnosis_type">Test Type</string>
+    <string name="label_SA_name">SubAssembly Name</string>
+    <string name="label_test_type">Control Type</string>
+    <string name="label_diagnose_motor_name">Motor Name</string>
+    <string name="label_diagnose_ip_signal">Signal Voltage (%)</string>
+    <string name="label_diagnose_run_time">Test Run Time (s)</string>
+    <string name="label_diagnose_motor_maxRPM">Max Motor RPM </string>
+    <string name="label_diagnose_flyer_maxRPM">Max Flyer RPM </string>
+    <string name="label_diagnose_target_rpm_percent">Target (%) </string>
+    <string name="label_diagnose_target_rpm">Target RPM  </string>
+    <string name="label_diagnose_live_rpm">Actual RPM </string>
+    <string name="label_lift_test_name">Lift Motors</string>
+    <string name="label_lift_direction">Bed Direction</string>
+    <string name="label_lift_distance">Bed Travel Distance(mm)</string>
+    <string name="label_lift_RPM">Lift Motor RPM</string>
+    <string name="label_drafting_FR_RPM">FrontRoller Motor RPM</string>
+    <string name="label_drafting_BR_RPM">BackRoller Motor RPM</string>
+    <string name="label_drafting_FL_RPM">Flyer Motor RPM</string>
+    <string name="label_drafting_BB_RPM">Bobbin Motor RPM</string>
+
+    <string name="btn_diagnose_run">Run Diagnose</string>
+    <string name="btn_diagnose_stop">Stop Test</string>
+    <string name="btn_diagnose_reset">Reset</string>
+    <string name="msg_diagnose_running">Running Diagnosis</string>
+    <string name="label_diagnose_lift_msg">Lift Bed Moving </string>
+    <string name="label_diagnose_liftDistLive_label">Distance Moved </string>
+    <string name="label_diagnose_lift_msgDone">Done </string>
+    <string name="msg_diagnose_complete_success">Diagnosis Completed Successfully</string>
+    <string name="msg_diagnose_complete_fail">Diagnosis Completed. Failed to reach Target! </string>
+    <string name="msg_diagnose_Incomplete">Diagnosis Completed. Motor Error!</string>
+
+    <string name="msg_halt_restart">Restart Machine</string>
+    <string name="menuEnablePID">Enable PID Mode</string>
+    <string name="menuDisablePID">Disable PID Mode</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

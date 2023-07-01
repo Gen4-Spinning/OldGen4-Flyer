@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "machine.microspin.com.flyerConsole"
+        minSdkVersion 21
+        //noinspection OldTargetApi
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+}
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.github.douglasjunior.AndroidBluetoothLibrary:BluetoothClassicLibrary:0.3.5'
+    //drive
+    implementation 'com.google.apis:google-api-services-drive:v3-rev136-1.25.0'
+    implementation 'com.google.api-client:google-api-client:1.28.0'
+    implementation 'com.google.http-client:google-http-client-gson:1.28.0'
+    implementation 'com.google.http-client:google-http-client:1.28.0'
+    implementation 'com.google.android.gms:play-services-tasks:16.0.1'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

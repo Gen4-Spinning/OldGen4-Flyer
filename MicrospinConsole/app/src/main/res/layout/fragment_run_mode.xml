@@ -1,0 +1,339 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/runMode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="machine.microspin.com.flyerConsole.DashboardRunMode">
+
+    <TextView
+        android:id="@+id/operatingParam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/label_operating_params"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/statusBox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/operatingParam"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/label_op_status"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_box_rect_black_thick">
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/runLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusBox"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/attr1Box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/attr1Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:text="@string/label_target_layer"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_box_rect_black_thin">
+
+                <TextView
+                    android:id="@+id/attr1Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attr2Box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/attr2Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1.27"
+                android:text="@string/label_param_2"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_box_rect_black_thin">
+
+                <TextView
+                    android:id="@+id/attr2Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attr3Box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/attr3Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_param_3"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/subRTCBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.17"
+                        android:text="@string/action_reduce" />
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/shape_box_rect_black_thin">
+
+                        <TextView
+                            android:id="@+id/attr3Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="2dp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/addRTCBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.16"
+                        android:text="@string/action_add" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusBox"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/reasonBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reasonTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:text="@string/label_stop_reason"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_box_rect_black_thin">
+
+                <TextView
+                    android:id="@+id/reasonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="26sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/errorBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/motorErrorCodeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:text="@string/label_stop_error"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_box_rect_black_thin">
+
+                <TextView
+                    android:id="@+id/motorErrorCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="26sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/valueBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/valueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:text="@string/label_stop_value"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_box_rect_black_thin">
+
+                <TextView
+                    android:id="@+id/valueValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="26sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusBox"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

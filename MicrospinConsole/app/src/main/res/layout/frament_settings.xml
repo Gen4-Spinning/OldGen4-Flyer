@@ -1,0 +1,545 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:isScrollContainer="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="machine.microspin.com.flyerConsole.DashboardRunMode">
+
+    <LinearLayout
+        android:id="@+id/settingsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:isScrollContainer="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/label_settings"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/factorystngs"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0"
+            android:drawableStart="@android:drawable/ic_menu_manage" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:drawableStart="@android:drawable/ic_menu_save" />
+
+        <Button
+            android:id="@+id/pidBtn"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_setting_next1"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingsHeader"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:isScrollContainer="true"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting1Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_1" />
+
+                <EditText
+                    android:id="@+id/setting1"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting2Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_2" />
+
+                <EditText
+                    android:id="@+id/setting2"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting3Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_3" />
+
+                <EditText
+                    android:id="@+id/setting3"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting4Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_4" />
+
+                <EditText
+                    android:id="@+id/setting4"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting5Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_5" />
+
+                <EditText
+                    android:id="@+id/setting5"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting6Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_6" />
+
+                <EditText
+                    android:id="@+id/setting6"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting7Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_7" />
+
+                <EditText
+                    android:id="@+id/setting7"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting8Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_8" />
+
+                <EditText
+                    android:id="@+id/setting8"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setting9Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/label_setting_9" />
+
+                <EditText
+                    android:id="@+id/setting9"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ems="10"
+                    android:inputType="number"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/settingsPID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingsHeader"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:isScrollContainer="true"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/OptionsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/MotorValueLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/pidSpinnerOptions" />
+
+                <Spinner
+                    android:id="@+id/pidOptionValues"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:prompt="@string/prompt_select_one"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/PID_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/KpLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_Kp"
+                        tools:ignore="DuplicateIds" />
+
+                    <EditText
+                        android:id="@+id/kpSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/KiLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_Ki" />
+
+                    <EditText
+                        android:id="@+id/kiSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/startingOffsetLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_startingOffset" />
+
+                    <EditText
+                        android:id="@+id/startoffsetSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        tools:ignore="LabelFor" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ramp_RTFMultiplier"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rampUpMLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_rampUp_M" />
+
+                    <EditText
+                        android:id="@+id/rampUpMSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rampDownMLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_rampDown_M" />
+
+                    <EditText
+                        android:id="@+id/rampDownMSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RampRates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rampUpRate_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_rampUp_rate" />
+
+                    <EditText
+                        android:id="@+id/rampUpRateSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rampDownRate_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/label_rampDown_rate" />
+
+                    <EditText
+                        android:id="@+id/rampDownRateSetting"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/refreshPIDbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/msg_PIDSetting_buttonRefresh" />
+
+                <Button
+                    android:id="@+id/savePIDbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/msg_PIDSetting_buttonSave" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
