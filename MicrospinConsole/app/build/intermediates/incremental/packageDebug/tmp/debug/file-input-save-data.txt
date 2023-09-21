@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Sat Jul 01 11:24:43 IST 2023
+#Thu Jul 13 12:03:33 IST 2023
 0.baseType=DIRECTORY
-0.base=E\:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.base=E\:\\harsha\\github repos\\OldGen4-Flyer\\MicrospinConsole\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.path=classes.dex
 0.set=DEX
 count=1

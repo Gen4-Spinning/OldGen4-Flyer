@@ -104,7 +104,7 @@ public interface Pattern {
     }
 
     enum LiftTestTypes {
-        RIGHT,LEFT,BOTH
+        BOTH
     }
 
     enum LiftDirectionTypes {
@@ -217,7 +217,7 @@ public interface Pattern {
             put("0053", StopReasonValue.BACK_ROLLER.name());
             put("0054", StopReasonValue.LIFT_RIGHT.name());
             put("0055", StopReasonValue.LIFT_LEFT.name());
-           // put("0056", StopReasonValue.LIFT.name());
+            put("0056", StopReasonValue.LIFT.name());
         }
     };
 
@@ -277,8 +277,8 @@ public interface Pattern {
     Map<String, String> LiftTestTypeMap = new HashMap<String, String>() {
         {
             put(LiftTestTypes.BOTH.name(), "01");
-            put(LiftTestTypes.LEFT.name(), "02");
-            put(LiftTestTypes.RIGHT.name(), "03");
+            //put(LiftTestTypes.LEFT.name(), "02");
+            //put(LiftTestTypes.RIGHT.name(), "03");
         }
     };
 

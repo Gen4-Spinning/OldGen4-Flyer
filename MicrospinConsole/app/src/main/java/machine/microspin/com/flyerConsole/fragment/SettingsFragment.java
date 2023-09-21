@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ import machine.microspin.com.flyerConsole.entity.Utility;
 public class SettingsFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     private SettingsCommunicator mCallback;
     public EditText setting1, setting2, setting3, setting4, setting5, setting6, setting7, setting8, setting9;
-    public EditText Kpsetting,Kisetting,startOffsetsetting; // pid motor options
+    public EditText Kpsetting,Kisetting,startOffsetsetting,FFsetting; // pid motor options
     public EditText rampUpM_setting,rampDownM_setting; //df ramp multiplier
     public EditText rampUp_rate_setting,rampDown_rate_setting; //df stop vars
 
@@ -113,6 +114,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener, 
         Kpsetting =  (EditText)rootView.findViewById(R.id.kpSetting);
         Kisetting =  (EditText)rootView.findViewById(R.id.kiSetting);
         startOffsetsetting =  (EditText)rootView.findViewById(R.id.startoffsetSetting);
+        FFsetting = (EditText)rootView.findViewById(R.id.FFSetting);
         // ff rtf multiplier vars options
         rampUpM_setting =  (EditText)rootView.findViewById(R.id.rampUpMSetting);
         rampDownM_setting =  (EditText)rootView.findViewById(R.id.rampDownMSetting);
@@ -276,27 +278,33 @@ public class SettingsFragment extends Fragment implements View.OnClickListener, 
                 int attr1Int= 0;
                 int attr2Int = 0;
                 int attr3Int = 0;
+                int attr4Int = 0;
                 if (PID_current_Layout == PID_MOTOR_LAYOUT) {
                     attr1Int  = (int)(Float.parseFloat(Kpsetting.getText().toString()) * 100);
                     attr2Int = (int)(Float.parseFloat(Kisetting.getText().toString()) * 100);
                     attr3Int = Integer.parseInt(startOffsetsetting.getText().toString());
+                    attr4Int = (int)(Float.parseFloat(FFsetting.getText().toString()) * 100);
                 }
                 else if (PID_current_Layout == PID_FF_RTF_MULTIPLIER_LAYOUT){
                     attr1Int  = (int)(Float.parseFloat(rampUpM_setting.getText().toString()) * 100);
                     attr2Int = (int)(Float.parseFloat(rampDownM_setting.getText().toString()) * 100);
                     attr3Int = 0;
+                    attr4Int = 0;
                 }
                 else{
                     attr1Int  = Integer.parseInt(rampUp_rate_setting.getText().toString());
                     attr2Int =  Integer.parseInt(rampDown_rate_setting.getText().toString());
                     attr3Int = 0;
+                    attr4Int = 0;
                 }
                 String payload = Settings.updateNewPIDSetting(attrValue,
                         attr1Int,
                         attr2Int,
-                        attr3Int
+                        attr3Int,
+                        attr4Int
                 );
 
+                Log.d("PID",payload);
                 mCallback.onSettingsUpdate(payload.toUpperCase());
             }else{
                 mCallback.raiseMessage(validateMessage);
@@ -312,6 +320,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener, 
             { Kisetting.setText("0"); }
             if (TextUtils.isEmpty(startOffsetsetting.getText().toString()))
             { startOffsetsetting.setText("0"); }
+            if (TextUtils.isEmpty(FFsetting.getText().toString()))
+            { FFsetting.setText("0"); }
 
         }else if (pidLayout == PID_FF_RTF_MULTIPLIER_LAYOUT){
             if (TextUtils.isEmpty(rampUpM_setting.getText().toString()))
@@ -340,9 +350,10 @@ public class SettingsFragment extends Fragment implements View.OnClickListener, 
     private String isValidPIDSettings(int pidLayout) {
 
         if (pidLayout == PID_MOTOR_LAYOUT) {
-            DoubleInputFilter set1 = new DoubleInputFilter(getString(R.string.label_Kp), 0.01, 2.0);
-            DoubleInputFilter set2 = new DoubleInputFilter(getString(R.string.label_Ki), 0.01, 2.0);
+            DoubleInputFilter set1 = new DoubleInputFilter(getString(R.string.label_Kp), 0.01, 5.0);
+            DoubleInputFilter set2 = new DoubleInputFilter(getString(R.string.label_Ki), 0.01, 5.0);
             IntegerInputFilter set3 = new IntegerInputFilter(getString(R.string.label_startingOffset), 0, 700);
+            DoubleInputFilter set4 = new DoubleInputFilter(getString(R.string.label_FF_Factor), 0.01, 3.0);
 
             if (set1.filter(Kpsetting) != null) {
                 return set1.filter(Kpsetting);
@@ -352,6 +363,9 @@ public class SettingsFragment extends Fragment implements View.OnClickListener, 
             }
             if (set3.filter(startOffsetsetting) != null) {
                 return set3.filter(startOffsetsetting);
+            }
+            if (set3.filter(FFsetting) != null) {
+                return set3.filter(FFsetting);
             }
         }
         else if (pidLayout == PID_FF_RTF_MULTIPLIER_LAYOUT){
@@ -502,6 +516,7 @@ private List<String> getValueListForPIDOptions() {
              Kisetting.setEnabled(setting);
              Kpsetting.setEnabled(setting);
              startOffsetsetting.setEnabled(setting);
+             FFsetting.setEnabled(setting);
          }
          if (current_layout == PID_FF_RTF_MULTIPLIER_LAYOUT) {
              rampUpM_setting.setEnabled(setting);
@@ -519,9 +534,11 @@ private List<String> getValueListForPIDOptions() {
             Kpsetting.setText(Settings.MakeFloatString(Settings.pid_req_attr1 / 100.0f,2));
             Kisetting.setText(Settings.MakeFloatString(Settings.pid_req_attr2 / 100.0f,2));
             startOffsetsetting.setText(Settings.MakeIntString(Settings.pid_req_attr3));
+            FFsetting.setText(Settings.MakeFloatString(Settings.pid_req_attr4 / 100.0f,2));
             Kisetting.setEnabled(true);
             Kpsetting.setEnabled(true);
             startOffsetsetting.setEnabled(true);
+            FFsetting.setEnabled(true);
         }
         else if(PID_current_Layout == PID_FF_RTF_MULTIPLIER_LAYOUT){
             rampUpM_setting.setText(Settings.MakeFloatString(Settings.pid_req_attr1 / 100.0f,2));
@@ -555,9 +572,11 @@ private List<String> getValueListForPIDOptions() {
             Kisetting.setText(ZEROSTRING);
             Kpsetting.setText(ZEROSTRING);
             startOffsetsetting.setText(ZEROSTRING);
+            FFsetting.setText(ZEROSTRING);
             Kisetting.setEnabled(false);
             Kpsetting.setEnabled(false);
             startOffsetsetting.setEnabled(false);
+            FFsetting.setEnabled(false);
         }
 
         if (layout == PID_FF_RTF_MULTIPLIER_LAYOUT) {

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "E:\\harsha\\github repos\\OldGen4-Flyer\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "E:\\harsha\\github repos\\OldGen4-Flyer\\MicrospinConsole\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

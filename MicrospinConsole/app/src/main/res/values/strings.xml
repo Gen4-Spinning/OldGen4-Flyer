@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">"Flyer"</string>
     <string name="version">"Ver:"</string>
-    <string name="code">"PH2_AQ_FF-V06"</string>
+    <string name="code">"IL_FF-V07"</string>
     <string name="action_scan">SCAN</string>
     <string name="action_stop">STOP</string>
     <string name="action_restart">Restart</string>
@@ -79,6 +79,8 @@
     <string name="label_Kp">Kp</string>
     <string name="label_Ki">Ki</string>
     <string name="label_startingOffset">Starting PWM Offset </string>
+    <string name="label_FF_Factor">Feed Forward Constant </string>
+
     <string name="label_rampUp_M">RTF RampUp Multiplier</string>
     <string name="label_rampDown_M">RTF RampDown Multiplier</string>
     <string name="label_rampUp_rate">RampUp Speed</string>

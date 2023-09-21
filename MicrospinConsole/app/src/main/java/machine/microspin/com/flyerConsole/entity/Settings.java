@@ -50,20 +50,23 @@ public class Settings {
     final private static String PID_ATTR_PID_PATTERN = "06";
     final private static String PID_REQUEST_ATTR_CODE= "01";
     final private static String PID_NEWSETTINGS_ATTR_CODE= "02";
-    final private static int PID_ATTR_LENGTH = 16;
+    final private static int PID_ATTR_LENGTH = 20;
 
     private static float Kp_f = 0;
     private static float Ki_f = 0;
     private static int startPwmOffset = 0;
+    private static float ff_mutiplier = 0;
     //default vals.
     private static float defaultKp_f = 0;
     private static float defaultKi_f = 0;
     private static int defaultstartPwmOffset = 0;
+    private static float defaultFFmultiplier = 0;
 
     // these are all the pid request msgs that you can get from the machine
     public static int pid_req_attr1 = 0;
     public static int pid_req_attr2 = 0;
     public static int pid_req_attr3 = 0;
+    public static int pid_req_attr4 = 0;
 
     public static String getMachineId (){
         return machineId;
@@ -182,7 +185,7 @@ public class Settings {
 
     }
 
-    public static String updateNewPIDSetting(String motorIndex,int s1, int s2, int s3) {
+    public static String updateNewPIDSetting(String motorIndex,int s1, int s2, int s3 , int s4) {
 
         // Construct payload String
         StringBuilder payload = new StringBuilder();
@@ -206,7 +209,8 @@ public class Settings {
         attrPayload.append(Utility.formatValueByPadding(attr,2));
         attr = Utility.convertIntToHexString(s3);
         attrPayload.append(Utility.formatValueByPadding(attr,2));
-
+        attr = Utility.convertIntToHexString(s4);
+        attrPayload.append(Utility.formatValueByPadding(attr,2));
         //Construct payload string
         payload.append(SOF).
                 append(sender).
@@ -402,6 +406,7 @@ public class Settings {
         int attr1;
         int attr2;
         int attr3;
+        int attr4;
 
         if (payload.length() < 4) {
             return false;
@@ -427,7 +432,7 @@ public class Settings {
         pid_req_attr1 = Utility.convertHexToInt(payload.substring(26, 30));
         pid_req_attr2 = Utility.convertHexToInt(payload.substring(30, 34));
         pid_req_attr3 = Utility.convertHexToInt(payload.substring(34, 38));
-
+        pid_req_attr4 = Utility.convertHexToInt(payload.substring(38, 42));
         return true;
     }
 

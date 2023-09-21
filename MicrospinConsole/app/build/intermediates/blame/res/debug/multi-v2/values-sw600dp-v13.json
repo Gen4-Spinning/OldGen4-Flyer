@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "E:\\harsha\\github repos\\OldGen4-Flyer\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Microspin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\831b6d03cab3f84262fcc12fac65b8e1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",

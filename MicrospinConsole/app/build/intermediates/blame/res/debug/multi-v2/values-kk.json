@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\harsha\\github repos\\oldGen4-FlyerNewV6\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
+            "outputFile": "E:\\harsha\\github repos\\OldGen4-Flyer\\MicrospinConsole\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Microspin\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\83ba1b0e19fdd84ea27b277cea3fbba4\\res\\values-kk\\values.xml",
